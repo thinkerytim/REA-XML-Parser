@@ -107,14 +107,14 @@ class Parser {
              * catch so we suppress them when not in debug mode
              */
             if($this->debug) {
-                $xml = new SimpleXMLElement($xml_string);
+                $xml = new \SimpleXMLElement($xml_string);
             }
             else {
-                @$xml = new SimpleXMLElement($xml_string);
+                @$xml = new \SimpleXMLElement($xml_string);
             }
 
         }
-        catch(Exception $e) {
+        catch(\Exception $e) {
             $this->feedback($e->getMessage());
         }
 
@@ -271,7 +271,7 @@ class Parser {
 			}	
 		}
 		else {
-			throw new Exception("Directory could not be found");
+			throw new \Exception("Directory could not be found");
 		}
 
 		return $properties;
@@ -315,7 +315,7 @@ class Parser {
 			}
 		}
 		else {
-			throw new Exception("File could not be found");
+			throw new \Exception("File could not be found");
 		}
 
 		return $properties;
