@@ -39,7 +39,7 @@
 
 namespace REA_XML_Parser;
 
-class REA_XML {
+class Parser {
 
 	/* Default Fields we return. You can specify any
 	 * fields int the REA XML standard
