@@ -1,0 +1,25 @@
+{
+    "name": "thinkerytim/rea-xml-parser",
+    "description": "PHP Parser Class for REA XML",
+    "license": "GNU GPL v3",
+    "authors": [
+        {
+            "name": "Ben Dougherty",
+            "email": "sales@mandurahweb.com.au",
+            "homepage": "http://www.mandurahweb.com.au"
+
+        },
+        {
+            "name": "Tim Kramer",
+            "email": "tim@thethinkery.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "REA_XML_Parser": "src/"
+        }
+    }
+}
