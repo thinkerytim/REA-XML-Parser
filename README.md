@@ -19,7 +19,7 @@ This code allows you to easily retrieve an associative arary of properties index
 
 
 	##Usage:
-		$rea = new REA_XML($debug=true); //uses default fields
+		$rea = new Parser($debug=true); //uses default fields
 	
 		$properties = $rea->parse_dir($xml_file_dir, $processed_dir, $failed_dir, $excluded_files=array());
  	

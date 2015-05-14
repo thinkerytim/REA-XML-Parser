@@ -45,8 +45,12 @@ class Parser {
 	 * fields int the REA XML standard
 	 */
 	private $fields = array (
+		'uniqueID',
+		'agentID',
 		'priceView',
 		'description',
+		'headline',
+		'energyRating',
 		'features' => array(
 			'bedrooms',
 			'bathrooms',
@@ -56,6 +60,11 @@ class Parser {
 			'pool',
 			'alarmSystem',
 			'otherFeatures',
+			'livingArea',
+			'alarmSystem',
+			'dishwasher',
+			'gym',
+			'broadband'
 		),
 		'address' => array(
 			'streetNumber',
@@ -63,7 +72,16 @@ class Parser {
 			'suburb',
 			'state',
 			'postcode',
-		),	
+			'country'
+		),
+		'buildingDetails' => array(
+			'area'
+		),
+		'listingAgent' => array(
+			'name',
+			'telephone',
+			'email'
+		),
 		'images',
 		'status',
 	);
@@ -131,6 +149,8 @@ class Parser {
                 $property_type = $property->getName();
 
                 $prop = array();//reset property
+                $prop['images'] = array();
+                $prop['floorplans'] = array();
 
                 /* For every property we select all
                  * the requested fields
@@ -170,8 +190,9 @@ class Parser {
                             if(!is_null($property->$field->floorplan)) {
                                 foreach($property->$field->floorplan as $floorplan) {
                                     $attr = $floorplan->attributes();
-                                    if($attr) {;
-                                        $prop['floorplan_'.(string)$attr->id] = (string)$attr->url;
+                                    if($attr) {
+                                    	$location = $attr->url ?: $attr->file;
+                                        $prop['floorplans']['floorplan_'.(string)$attr->id] = (string) $location;
                                     }
                                 }
                             }
@@ -179,7 +200,8 @@ class Parser {
                                 foreach($property->$field->img as $img) {
                                     $attr = $img->attributes();
                                     if($attr) {
-                                        $prop['img_' . (string)$attr->id] = (string)$attr->url;
+                                    	$location = $attr->url ?: $attr->file;
+                                        $prop['images']['img_' . (string)$attr->id] = (string) $location;
                                     }
                                 }
                             }
