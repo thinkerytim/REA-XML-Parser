@@ -101,7 +101,7 @@ class REA_XML {
 
             /* Some of the xml files I received were invalid. This could be due to a number
              * of reasons. SimpleXMLElement still spits out some ugly errors even with the try
-             * catch so we supress them when not in debug mode
+             * catch so we suppress them when not in debug mode
              */
             if($this->debug) {
                 $xml = new SimpleXMLElement($xml_string);
@@ -226,7 +226,7 @@ class REA_XML {
 				/* Loop through all the files. */
 				while(false !== ($xml_file = readdir($handle))) {
 
-					/* Ensure it's not exlcuded. */
+					/* Ensure it's not excluded. */
 					if(!in_array($xml_file, $this->excluded_files)) {
 						
 						/* Get the full path */
