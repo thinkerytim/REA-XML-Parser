@@ -73,8 +73,11 @@ class REA_XML {
 
 	/* Keeps track of excluded files */
 	private $excluded_files;
+	
+	/* debug status */
+	protected $debug;
 
-	function REA_XML($debug=false, $fields=array()) {
+	function __construct($debug=false, $fields=array()) {
 
 		/* Use requested fields if set */
 		if(!empty($fields)) {
@@ -285,7 +288,7 @@ class REA_XML {
 			/* Parse the XML file */
 			$properties = $this->parse_xml(file_get_contents($xml_full_path));
 
-			if(is_array($properties) && count($properties > 0)) {
+			if(is_array($properties) && (count($properties) > 0)) {
 				/* If a processed/removed directory was supplied then we move
 				* the xml files accordingly after they've been processed
 				*/
