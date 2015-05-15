@@ -2,6 +2,9 @@
     "name": "thinkerytim/rea-xml-parser",
     "description": "PHP Parser Class for REA XML",
     "license": "GNU GPL v3",
+    "keywords": [
+        "reaxml", "rea", "real estate"
+    ],
     "authors": [
         {
             "name": "Ben Dougherty",
