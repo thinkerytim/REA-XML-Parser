@@ -10,11 +10,9 @@ This code allows you to easily retrieve an associative arary of properties index
  * commercialLand
  * business
 
-##Installation 
+##Installation :
 
 Using composer: `composer require thinkerytim/REA-XML-Parser`
-
-##Usage
 
 ##Usage:
 		$rea = new Parser($debug=true); //uses default fields
@@ -28,9 +26,9 @@ For a full list of fields please see. http://reaxml.realestate.com.au/ and click
 
 
 ##Further Reading:
- - You can see a write-up of this code been used to create posts in WordPress here: http://www.devblog.com.au/rea-xml-parser-and-wordpress
+You can see a write-up of this code been used to create posts in WordPress here: http://www.devblog.com.au/rea-xml-parser-and-wordpress
 
 ##License: 
- - This code is licensed under GNU GPL v3 and may be used and distributed freely. You may fork the code make changes add extra features etc. Any changes to this code should be released to the open source community.
+This code is licensed under GNU GPL v3 and may be used and distributed freely. You may fork the code make changes add extra features etc. Any changes to this code should be released to the open source community.
 
 	
