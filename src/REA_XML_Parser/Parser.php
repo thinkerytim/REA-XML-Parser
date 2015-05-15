@@ -5,36 +5,15 @@
  * URL: http://www.devblog.com.au, 
  *	 	http://www.mandurahweb.com.au
  *
- * This code was written for a project by mandurahweb.com. Please give credit if you
+ * This code was originally written for a project by mandurahweb.com. Please give credit if you
  * use this code in any of your projects. You can see a write-up of this code been
  * used to create posts in WordPress here: http://www.devblog.com.au/rea-xml-parser-and-wordpress
  *
- * This code is licensed under with the GPL and may be used and distributed freely. 
- * You may fork the code make changes add extra features etc.
+ * Forked and maintained / updated by:
+ * Author: The Thinkery LLC
+ * URL: http://www.thethinkery.net
  *
- * Any changes to this code should be released to the open source community.
- *
- *
- * REA_XML allows you to easily retrieve an associative arary of properties
- * indexed by propertyList. Properties types as specified in the REAXML documentation
- * include:
- * 		residential
- *		rental
- *		land
- * 		rural
- *		commercial
- *		commercialLand
- *		business
- *
- * USAGE:
- * 		$rea = new REA_XML($debug=true); //uses default fields
- *		$properties = $rea->parse_dir($xml_file_dir, $processed_dir, $failed_dir, $excluded_files=array());
- * 
- * or 	$property = $rea->parse_file();
- *
- * For a full list of fields please see. http://reaxml.realestate.com.au/ and click 'Mandatory Fields'
- *
- *
+ * License: GNU GPL v3
  */
 
 namespace REA_XML_Parser;
